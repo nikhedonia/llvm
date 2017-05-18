@@ -245,8 +245,8 @@ cxx_library(
     '-lz',
   ],
   exported_platform_linker_flags = [
-    ('default', ['-ldl', '-pthread']),
-    ('linux.*', ['-ldl', '-pthread']),
+    ('default', ['-ldl', '-pthread', '-lcurses']),
+    ('linux.*', ['-ldl', '-pthread', '-lcurses']),
   ],
   deps = [
     ':config',
